@@ -86,7 +86,7 @@
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+               document.addEventListener('DOMContentLoaded', () => {
             const canvas = document.getElementById('star-canvas');
             const ctx = canvas.getContext('2d');
 
@@ -104,11 +104,18 @@
                     ctx.arc(x, y, radius, 0, Math.PI * 2);
                     ctx.fill();
                 }
+
+                // Add this line to display 'Hello MK!'
+                ctx.fillStyle = 'red';
+                ctx.font = 'bold 48px Arial';
+                ctx.fillText('Hello MK!', canvas.width / 2, canvas.height / 2);
+
                 requestAnimationFrame(drawStars);
             }
 
             drawStars();
         });
+
     </script>
 </head>
 <body>
